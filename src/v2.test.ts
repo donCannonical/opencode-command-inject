@@ -15,7 +15,7 @@ type Command = {
 
 function fakeContext(directory: string, existingNames: string[] = []) {
   const registered: Command[] = []
-  const prompt = vi.fn(async (_input: unknown) => undefined)
+  const prompt = vi.fn(async () => undefined)
   const ctx = {
     location: { directory },
     command: {
